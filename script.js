@@ -1,3 +1,4 @@
+console.clear();
 // cursor code starts
 gsap.registerPlugin(ScrollTrigger);
 const locoScroll = new LocomotiveScroll({

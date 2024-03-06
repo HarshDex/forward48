@@ -15,11 +15,31 @@ const locoScroll = new LocomotiveScroll({
     pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
   });
 
-ScrollTrigger.defaults = {
-  scroller : '.main',
-}
 
-const commonScrollTriggerConfig = {
+
+  const forScroll = () =>{
+    scroll.on('scroll', (instance) => {
+      const scrollPosition = instance.scroll.y;
+    })
+    document.addEventListener('mousemove', (event) => {
+      const cursorX = event.clientX; 
+      const cursorY = event.clientY;
+
+      scroll.on('scroll', (instance) => {
+          const scrollPosition = instance.scroll.y;
+          const cursor = document.querySelector('.cursor');
+          // cursor.style.left = cursorX + 'px'; 
+          // cursor.style.top = cursorY + scrollPosition + 'px'; 
+          gsap.to(cursor,{
+            x : cursorX,
+            y : cursorY + scrollPosition
+          })
+      });
+    });
+  }
+  // forScroll();
+
+  const commonScrollTriggerConfig = {
     trigger: '.page2',
     scroller : '.main',
     start: '-10% 70%',
@@ -27,7 +47,7 @@ const commonScrollTriggerConfig = {
     scrub: true,
     ease : 'expo.inOut',};
 
-gsap.timeline()
+  gsap.timeline()
     .to('.page2-video', { 
         width: '95vw', 
         scrollTrigger: commonScrollTriggerConfig 
@@ -44,7 +64,7 @@ gsap.timeline()
             scrub: true, 
     }})
 
-gsap.utils.toArray(['.page2','.page3']).forEach((pannel)=>{
+  gsap.utils.toArray(['.page2','.page3']).forEach((pannel)=>{
     ScrollTrigger.create({
         trigger : pannel,
         scroller : '.main',
@@ -54,19 +74,19 @@ gsap.utils.toArray(['.page2','.page3']).forEach((pannel)=>{
         pinSpacing : false,
         pin : true,
     })
-})
+  })
 
-const page3custom ={
-    trigger : ".page3",
-    scroller : '.main',
-    start : 'top 80%',
-    end : 'top top',
-    scrub : true,
-    duration : 4,
-    ease : 'back.inOut(2)',
-}
+  const page3custom ={
+      trigger : ".page3",
+      scroller : '.main',
+      start : 'top 80%',
+      end : 'top top',
+      scrub : true,
+      duration : 4,
+      ease : 'back.inOut(2)',
+  }
 
-gsap.timeline()
+  gsap.timeline()
     .to('.navigation',{
     opacity : 0,
     scrollTrigger : page3custom,    
@@ -87,10 +107,7 @@ gsap.timeline()
     nav: true,
   });
 
-
-
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
   ScrollTrigger.refresh();
   
-
 })();

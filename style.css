@@ -142,8 +142,6 @@ html,body{
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     overflow: hidden;
-    z-index: 9;
-
 }
 
 .page3-info-section{
@@ -166,8 +164,8 @@ html,body{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 40vw;
+  height: 35em;
+  width: 45vw;
   border-radius: 10px;
   overflow: hidden;
   filter: blur(10);
@@ -183,24 +181,70 @@ html,body{
 
 
 
+
+
 /* page 3 ends */
+
+.pageNull{
+    height: 70vh;
+    width: 100%;
+}
+
 
 
 /* page 4 starts */
 .page4{
-    height: 160vh;
-    width: 100%;
-    background-color:white;
-    z-index: 10;
+  min-height: 120vh;
+  width: 100vw;
+  background-color: white;
+  padding: 4em;
+}
+.page4-heading p{
+  text-align: center;
+  color: #8B133B;
+  font-size: 4em;
+  font-weight: 900;
+  margin-bottom: 1em;
+}
+.owl-item > div:after {
+  font-size: 24px;
+  font-weight: bold;
+}
+.active.center {
+  transform: scale(1);
+  -webkit-filter: grayscale(0); 
+    filter: grayscale(0);
+}
+.active {
+  transform: scale(.8);
+  transition: .6s ease;
+  -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+}
+.owl-carousal-data{
+  text-align: center;
+  margin-bottom: 6vh;
+  font-weight: 500;
+}
+.owl-carousal-name{
+  font-size: 1.2em;
+  color: #8B133B;
+}
+.owl-carousal-work{
+  font-style: italic;
+  color: grey;
 }
 /* page 4 ends */
+
 
 /* page 5 starts */
 .page5{
   height: 100vh;
   width: 100%;
-  background-color:rgb(191, 147, 108);
+  background-color:white;
   z-index: 11;
+  border-top: 1px solid black;
+
 }
 /* page 5 ends */
 

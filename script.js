@@ -83,7 +83,7 @@ const page3custom ={
     end : 'top top',
     scrub : true,
     duration : 4,
-    ease : 'back.inOut(1.8)',
+    ease : 'back.inOut(2)',
 }
 
 gsap.timeline()
@@ -99,20 +99,16 @@ gsap.timeline()
   })
 
 
-// lerping effect
-// const lerpTextElements = document.querySelectorAll('.page3-info-section p');
 
-// scroll.on('scroll', (obj) => {
-//   lerpTextElements.forEach(textElement => {
-//     const progress = obj.scroll.y / (obj.limit.y - window.innerHeight); 
-//     const newY = progress * 100; // Move the text 100 units as you scroll the entire height 
-//     gsap.to(textElement, { 
-//       y: newY, 
-//       duration: 1, // Adjust the animation duration
-//       ease: 'power2.out' 
-//     });
-//   })
-// })
+$('.owl-carousel').owlCarousel({
+  autoplay: true,
+  center: true,
+  loop: true,
+  nav: true,
+});
+
+
+
 
 
 

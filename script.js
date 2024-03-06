@@ -1,5 +1,5 @@
-// cursor code starts
-gsap.registerPlugin(ScrollTrigger);
+(function(){
+  gsap.registerPlugin(ScrollTrigger);
 const locoScroll = new LocomotiveScroll({
     el: document.querySelector(".main"),
     smooth: true
@@ -15,28 +15,9 @@ const locoScroll = new LocomotiveScroll({
     pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
   });
 
-
-// function manageLocomotive() {
-//   if (window.innerWidth <= 768) { 
-//     if (scroll.destroyed) return;  
-//     scroll.destroy();  
-//   } else {
-//     if (!scroll.destroyed) return;
-//     scroll.init(); 
-//   }
-// }
-
-// window.addEventListener('resize', manageLocomotive); 
-// manageLocomotive();
-
-
 ScrollTrigger.defaults = {
   scroller : '.main',
 }
-
-const video = document.querySelector('.page2 video');
-const cursor = document.querySelector('.cursor');
-
 
 const commonScrollTriggerConfig = {
     trigger: '.page2',
@@ -72,7 +53,6 @@ gsap.utils.toArray(['.page2','.page3']).forEach((pannel)=>{
         scrub : true,
         pinSpacing : false,
         pin : true,
-        // markers : true,
     })
 })
 
@@ -100,27 +80,17 @@ gsap.timeline()
 
 
 
-$('.owl-carousel').owlCarousel({
-  autoplay: true,
-  center: true,
-  loop: true,
-  nav: true,
-});
+  $('.owl-carousel').owlCarousel({
+    autoplay: true,
+    center: true,
+    loop: true,
+    nav: true,
+  });
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-ScrollTrigger.refresh();
+  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+  ScrollTrigger.refresh();
   
+
+})();

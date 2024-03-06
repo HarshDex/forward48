@@ -137,7 +137,7 @@ html,body{
 
 .page3-info-section p{
   position: absolute;
-  top: 80%;
+  top: 90%;
   font-size: 1.6em;
   font-weight: 500;
 }
@@ -150,6 +150,7 @@ html,body{
   width: 45vw;
   border-radius: 10px;
   overflow: hidden;
+  margin-top: 10vh;
 }
 
 .page3-image img{
@@ -219,13 +220,68 @@ html,body{
 
 /* page 5 starts */
 .page5{
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color:white;
-  z-index: 11;
-  border-top: 1px solid black;
-
+  color: rgba(0, 0, 0, 0.84);
+  padding: 2em;
 }
+
+.page5-heading{
+  font-weight: 800;
+  font-size: 1.2em;
+  margin-bottom: 2.6em;
+}
+
+.page5-heading span{
+  color: #8B133B;
+}
+
+.page5-contents{
+  overflow: hidden;
+}
+.page5-content-bar{
+  position: relative;
+  height: 7em;
+  width: 100%;
+  border-bottom:1px solid rgba(138, 131, 131, 0.782);
+  display: flex;
+  cursor: pointer;
+  padding: 0.6em;
+  padding-bottom: .5em;
+}
+.page5-bar-part1{
+  position: absolute;
+  font-size: 2em;
+  letter-spacing: -2px;
+  font-weight: 800;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.page5-bar-part1 p{
+  align-self: center;
+}
+.page5-bar-part2{
+  display: flex;
+  font-weight: 1.8em;
+  position: absolute;
+  opacity : 0;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.page5-bar-part2 p{
+  font-size: 1.7em;
+  color: #8b133be2;
+  text-transform: capitalize;
+  font-weight: 800;
+}
+
+
+
+
 /* page 5 ends */
 
 /* .page 6 starts */
@@ -236,8 +292,4 @@ html,body{
   z-index: 12;
 }
 /* page 6 ends */
-
-
-
-/* Media query for screens smaller than 768px */
   

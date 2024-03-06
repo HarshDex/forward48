@@ -83,22 +83,49 @@ const locoScroll = new LocomotiveScroll({
     nav: true,
   });
 
-  const mediaQuery = window.matchMedia("(max-width: 600px)"); 
 
-  const handleMediaQuery = (mq) => {
-    if (mq.matches) {
-      tl.pause();
+
+
+  // page5 animations starts : 
+  const contentBars = document.querySelectorAll('.page5-content-bar');
+
+if (contentBars.length === 0) {
+  console.error('No elements with class "page5-content-bar" found.');
+  return;
+}
+
+contentBars.forEach((elem) => {
+  let flag = 0;
+
+  // Keep track of the timeline for each contentBar
+  const tl = gsap.timeline({ paused: true });
+
+  elem.addEventListener('click', () => {
+    const part1 = elem.querySelector('.page5-bar-part1');
+    const part2 = elem.querySelector('.page5-bar-part2');
+
+    // Clear any existing animations before starting a new one
+    tl.clear();
+
+    // Add animations to the timeline
+    if (flag === 0) {
+      // If flag is 0, fade out part1 and fade in part2
+      tl.to(part1, { opacity: 0, duration: 0.2 })
+        .to(part2, { opacity: 1, duration: 0.2 }, '-=0.2'); // Staggered timing
     } else {
-      tl.resume();
+      // If flag is 1, fade out part2 and fade in part1
+      tl.to(part2, { opacity: 0, duration: 0.2 })
+        .to(part1, { opacity: 1, duration: 0.2 }, '-=0.2'); // Staggered timing
     }
-  };
-  // Initial check
-  handleMediaQuery(mediaQuery); 
-  // Listener for changes
-  mediaQuery.addEventListener('change', (mq) => handleMediaQuery(mq)); 
 
-  
-  // important
+    // Play the timeline
+    tl.play();
+
+    // Toggle flag value
+    flag = flag === 0 ? 1 : 0;
+  });
+});
+
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
   ScrollTrigger.refresh();
   

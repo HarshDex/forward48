@@ -10,24 +10,12 @@ html,body{
   width : 100%;
 }
 
-.cursor{
-  /* display: none; */
-  border-radius: 100%;
-  justify-content: center;
-  align-items: center;
-  height: 5em;
-  width: 5em;
-  position: fixed;
-  z-index: 50;
-  background-color: pink;
-  transition: all ease-in-out .5s;
-  transform: scale(0);
-}
 
 .main{
-    /* cursor: none; */
     background-color: black ;
 }
+
+/* navigation starts */
 .navigation{
     display: flex;
     height : 20vh;
@@ -58,6 +46,7 @@ html,body{
     width : 100%;
     object-fit: cover;
 }
+/* navigation ends */
 
 
 /* page1 starts */
@@ -95,7 +84,6 @@ html,body{
   line-height: 1.3em;
   font-size: .4em;
 }
-
 /* page1 ends */
 
 
@@ -135,8 +123,9 @@ html,body{
 }
 
 .page3-info-section{
+  position: relative;
+  bottom: 30%;
   display: flex;
-  align-items: flex-end;
   padding-bottom: 20%;
   text-align: center;
   padding: 2em;
@@ -147,6 +136,8 @@ html,body{
 
 
 .page3-info-section p{
+  position: absolute;
+  top: 80%;
   font-size: 1.6em;
   font-weight: 500;
 }

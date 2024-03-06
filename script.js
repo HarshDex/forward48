@@ -2,7 +2,7 @@
   gsap.registerPlugin(ScrollTrigger);
 const locoScroll = new LocomotiveScroll({
     el: document.querySelector(".main"),
-    smooth: true
+    smooth: true,
   });
   locoScroll.on("scroll", ScrollTrigger.update);
   ScrollTrigger.scrollerProxy(".main", {
@@ -14,30 +14,6 @@ const locoScroll = new LocomotiveScroll({
     },
     pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
   });
-
-
-
-  const forScroll = () =>{
-    scroll.on('scroll', (instance) => {
-      const scrollPosition = instance.scroll.y;
-    })
-    document.addEventListener('mousemove', (event) => {
-      const cursorX = event.clientX; 
-      const cursorY = event.clientY;
-
-      scroll.on('scroll', (instance) => {
-          const scrollPosition = instance.scroll.y;
-          const cursor = document.querySelector('.cursor');
-          // cursor.style.left = cursorX + 'px'; 
-          // cursor.style.top = cursorY + scrollPosition + 'px'; 
-          gsap.to(cursor,{
-            x : cursorX,
-            y : cursorY + scrollPosition
-          })
-      });
-    });
-  }
-  // forScroll();
 
   const commonScrollTriggerConfig = {
     trigger: '.page2',
@@ -107,6 +83,22 @@ const locoScroll = new LocomotiveScroll({
     nav: true,
   });
 
+  const mediaQuery = window.matchMedia("(max-width: 600px)"); 
+
+  const handleMediaQuery = (mq) => {
+    if (mq.matches) {
+      tl.pause();
+    } else {
+      tl.resume();
+    }
+  };
+  // Initial check
+  handleMediaQuery(mediaQuery); 
+  // Listener for changes
+  mediaQuery.addEventListener('change', (mq) => handleMediaQuery(mq)); 
+
+  
+  // important
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
   ScrollTrigger.refresh();
   

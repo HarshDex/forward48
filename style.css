@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Quicksand:wght@300..700&display=swap');
+*{
+  padding : 0;
+  margin : 0;
+  box-sizing : border-box;
+  font-family: "Manrope",sans-serif;
+}
+html,body{
+  height : 100%;
+  width : 100%;
+}
+
+.cursor{
+  /* display: none; */
+  border-radius: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 5em;
+  width: 5em;
+  position: fixed;
+  z-index: 50;
+  background-color: pink;
+  transition: all ease-in-out .5s;
+
+}
+
+.main{
+    /* cursor: none; */
+    background-color: black ;
+}
+.navigation{
+    display: flex;
+    height : 20vh;
+    width : 100%;
+    padding: 3vw;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    z-index: 5;
+    position: fixed;
+}
+.navigation-buttons button{
+    background-color: transparent;
+    color: white;
+    border : none;
+    margin: 0.2em;
+    font-size: 1em;
+    letter-spacing: -1px;
+    cursor: pointer;    
+}
+.logo{
+    display: flex;
+    align-items: center;
+    height : 20vh;
+    width : 20%;
+}
+.logo img{
+    height : 100%;
+    width : 100%;
+    object-fit: cover;
+}
+
+
+/* page1 starts */
+.page1{
+    min-height : 90vh;
+    width: 100%;
+    background-color :  rgb(220, 207, 207);
+    padding-top: 10vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    /* padding-left: 3em; */
+}
+.page1-texts{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 80vw;
+    /* font-size: 2.3em; */
+    text-align: center;
+    margin-top: 10vh;
+    /* line-height: 5.5rem; */
+}
+.tag1{
+    margin-top: 12vh;
+    font-size: 9vw;
+}
+.tag2{
+  margin-top: 20px;
+    font-size: 6vw;
+}
+.page1-abouts{
+  width: 70%;
+}
+.page1-abouts p{
+  line-height: 1.3em;
+  font-size: .4em;
+}
+
+/* page1 ends */
+
+
+
+
+/* page2 starts */
+.page2{
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    padding-top: 5em;
+}
+.page2-video{
+    height: 90vh;
+    width: 70%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.page2-video video{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* page2 ends */
+
+
+
+
+
+
+/* page 3 starts */
+.page3{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(9, 9, 9);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    overflow: hidden;
+    z-index: 9;
+
+}
+
+.page3-info-section{
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  padding: 2em;
+  height: 100%;
+  width: 50%;
+  padding: 2em;
+}
+
+
+.page3-info-section p{
+  font-size: 1.6em;
+  font-weight: 500;
+}
+
+.page3-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 40vw;
+  border-radius: 10px;
+  overflow: hidden;
+  filter: blur(10);
+  background : linear-gradient(toright,white,transparent);
+}
+
+.page3-image img{
+  height:60%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+
+/* page 3 ends */
+
+
+/* page 4 starts */
+.page4{
+    height: 160vh;
+    width: 100%;
+    background-color:white;
+    z-index: 10;
+}
+/* page 4 ends */
+
+/* page 5 starts */
+.page5{
+  height: 100vh;
+  width: 100%;
+  background-color:rgb(191, 147, 108);
+  z-index: 11;
+}
+/* page 5 ends */
+
+/* .page 6 starts */
+.page6{
+  height: 100vh;
+  width: 100%;
+  background-color:rgb(109, 179, 233);
+  z-index: 12;
+}
+/* page 6 ends */
+
+
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 767px) {
+  .page1{
+    position: relative;
+  }
+    .page1-texts{
+      /* text-align: center; */
+      position: absolute;
+      top : 0;
+      left: 1;
+    }
+    .tag1{
+      font-size: 8vw;
+      line-height: 10vh;
+    }
+    .tag2{
+      line-height: 6vh;
+      font-size: 12vw;
+    }
+    .apply-button{
+      position: absolute;
+      width: 30vw;
+      height: 5vh;
+      top: -12vh;
+      right: 0vw;
+      z-index: 10;
+    }
+    .navigation {
+      /* flex-direction: column; */
+      height: 10vw !important;
+      width: 50vw ;
+      display: flex;
+    }
+  
+    .navigation-buttons {
+        display: flex;
+    }
+    .navigation-buttons button {
+        width: 18vw;
+      padding: 1em;
+      font-size: .6em;
+    }
+  
+    .logo {
+      position: relative;
+      top: 3vh;
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .page1-texts {
+      font-size: 1.8em;
+      line-height: 4.5vw;
+    }
+
+    .page2-video{
+        height: 40vh;
+    }
+
+
+    .page3{
+      flex-direction: column;
+    }
+  }
+  
+  /* Media query for screens between 768px and 1024px */
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    .page1-texts {
+      font-size: 2em;
+      /* line-height: 5vw; */
+
+    }
+  }
+  
+  /* Media query for screens larger than 1024px */
+  @media screen and (min-width: 1024px) {
+    .navigation {
+      padding: 1em 3vw;
+    }
+  
+    .page1-texts {
+      font-size: 2.5em;
+      line-height: 6vw;
+    }
+  }
+  

@@ -135,13 +135,13 @@ const locoScroll = new LocomotiveScroll({
   console.log(sec);
   gsap.to(sec, {
     xPercent: -100 * (sec.length - 1),
-    ease: "none",
+    ease: "ease",
     scrollTrigger: {
       trigger: ".page6",
       scroller : ".main",
       pin: true,
       scrub: 1,
-      snap: 1 / (sec.length - 1),
+      // snap: 1 / (sec.length - 1),
       end: () => "+=" + document.querySelector(".page6").offsetWidth,
     }
   });

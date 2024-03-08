@@ -132,7 +132,6 @@ const locoScroll = new LocomotiveScroll({
 
 
   let sec = gsap.utils.toArray(document.querySelectorAll('.pannel'));
-  console.log(sec);
   gsap.to(sec, {
     xPercent: -100 * (sec.length - 1),
     ease: "ease",
@@ -141,7 +140,7 @@ const locoScroll = new LocomotiveScroll({
       scroller : ".main",
       pin: true,
       scrub: 1,
-      // snap: 1 / (sec.length - 1),
+      snap: 1 / (sec.length - 1),
       end: () => "+=" + document.querySelector(".page6").offsetWidth,
     }
   });

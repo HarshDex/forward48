@@ -109,8 +109,8 @@
   
     }
     
-    /* Media query for screens between 768px and 1024px */
-    @media screen and (min-width: 768px) and (max-width: 1023px) {
+/* Media query for screens between 768px and 1024px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
       .page1-texts {
         font-size: 2em;
         /* line-height: 5vw; */
@@ -118,8 +118,8 @@
       }
     }
     
-    /* Media query for screens larger than 1024px */
-    @media screen and (min-width: 1024px) {
+/* Media query for screens larger than 1024px */
+@media screen and (min-width: 1024px) {
       .navigation {
         padding: 1em 3vw;
       }

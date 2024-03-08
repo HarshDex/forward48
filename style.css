@@ -230,17 +230,14 @@ span{
   color: rgba(0, 0, 0, 0.84);
   padding: 2em;
 }
-
 .page5-heading{
   font-weight: 800;
   font-size: 1.2em;
   margin-bottom: 2.6em;
 }
-
 .page5-heading span{
   color: #8B133B;
 }
-
 .page5-contents{
   overflow: hidden;
 }
@@ -275,14 +272,12 @@ span{
   height: 100%;
   width: 100%;
 }
-
 .page5-bar-part2 p{
   font-size: 1.7em;
   color: #8b133be2;
   text-transform: capitalize;
   font-weight: 800;
 }
-
 /* page 5 ends */
 
 /* .page 6 starts */
@@ -301,26 +296,129 @@ span{
 .pannel{
   height: 100vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
 }
-/* .page6-part1{
-  background-color: purple;
-}
-.page6-part2{
-  background-color: pink;
-}
-.page6-part3{
-  background-color: skyblue;
-}
-.page6-part4{
-  background-color: lightgreen
-} */
 .page6-heading{
+  height: 10%;
   margin-left: 1.5vw;
-  font-size: 2.5em;
+  font-size: 3em;
   opacity: 0;
+  font-weight: 800;
 }
+.page6-contents{
+  display: flex;
+  height: 90%;
+  width: 100%;
+}
+.page6-paragraphs{
+  padding: 1em;
+  height: 100%;
+  width: 50%;
+}
+.page6-paragraphs p:nth-child(1){
+  margin : 1em 0;
+}
+.pannel:nth-child(2){
+  align-items : flex-end;
+  justify-self: flex-end;
+  padding-left: 6em;
+}
+.pannel:nth-child(2) .page6-contents{
+  position: relative;
+  top: 30%;
+  left: 40%;
+  height: fit-content;
+  padding-left: 6em;
+}
+
+.page6-images{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+}
+.page6-image{
+  position: absolute;
+  height: 70%;
+  width: 60%;
+  margin-left: 40%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.page6-image:nth-child(2){
+  transform : rotate(10deg);
+}
+.page6-image:nth-child(3){
+  transform : rotate(-10deg);
+}
+.page6-image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.page6-part2 .page6-heading{
+  position: relative;
+  top: 30%;
+}
+.page6-part3 .page6-heading{
+  font-size: 2em;
+  /* margin-bottom: 10vh; */
+}
+
+.pannel:nth-child(3) .page6-contents{
+  position: relative;
+  top: 30%;
+  left: 10%;
+  height: fit-content;
+  padding-left: 6em;
+}
+.pannel:nth-child(3) .page6-heading{
+  position: relative;
+  top: 25%;
+  left: 17%;
+}
+.page6-final{
+  height: 45vh;
+  width: 40%;
+}
+.pannel:nth-child(4) .page6-heading,.pannel:nth-child(4) .page6-contents{
+  height: fit-content;
+  position: relative;
+  left: 50%;
+  top: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* page 6 ends */
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* page 7 starts */
 .page7{
   height: 100vh;

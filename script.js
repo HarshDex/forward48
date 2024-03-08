@@ -74,57 +74,77 @@ const locoScroll = new LocomotiveScroll({
     snap : 1/4,
   })
 
-
-
   $('.owl-carousel').owlCarousel({
     autoplay: true,
     center: true,
     loop: true,
     nav: true,
+    autoplaySpeed : 600,
   });
 
 
-
+// this is for color change
+  gsap.to('.main',{
+    backgroundColor : "white",
+    scrollTrigger : {
+      trigger : '.page3',
+      scroller : ".main",
+      start : 'center center',
+      scrub : true,
+    }
+  })
 
   // page5 animations starts : 
-  const contentBars = document.querySelectorAll('.page5-content-bar');
+  const pageFiveAnimations = () =>{
+    const contentBars = document.querySelectorAll('.page5-content-bar');
+    contentBars.forEach((elem) => {
+      let flag = 0;
+      const tl = gsap.timeline({ paused: true });
+      elem.addEventListener('click', () => {
+        const part1 = elem.querySelector('.page5-bar-part1');
+        const part2 = elem.querySelector('.page5-bar-part2');
+        tl.clear();
+        if (flag === 0) {
+          tl.to(part1, { opacity: 0, duration: 0.2 })
+            .to(part2, { opacity: 1, duration: 0.2 }, '-=0.2');
+        } else {
+          tl.to(part2, { opacity: 0, duration: 0.2 })
+            .to(part1, { opacity: 1, duration: 0.2 }, '-=0.2');
+        }
+        tl.play();
+        flag = flag === 0 ? 1 : 0;
+      });
+    });
+  }
+  pageFiveAnimations();
 
-if (contentBars.length === 0) {
-  console.error('No elements with class "page5-content-bar" found.');
-  return;
-}
 
-contentBars.forEach((elem) => {
-  let flag = 0;
-
-  // Keep track of the timeline for each contentBar
-  const tl = gsap.timeline({ paused: true });
-
-  elem.addEventListener('click', () => {
-    const part1 = elem.querySelector('.page5-bar-part1');
-    const part2 = elem.querySelector('.page5-bar-part2');
-
-    // Clear any existing animations before starting a new one
-    tl.clear();
-
-    // Add animations to the timeline
-    if (flag === 0) {
-      // If flag is 0, fade out part1 and fade in part2
-      tl.to(part1, { opacity: 0, duration: 0.2 })
-        .to(part2, { opacity: 1, duration: 0.2 }, '-=0.2'); // Staggered timing
-    } else {
-      // If flag is 1, fade out part2 and fade in part1
-      tl.to(part2, { opacity: 0, duration: 0.2 })
-        .to(part1, { opacity: 1, duration: 0.2 }, '-=0.2'); // Staggered timing
+  gsap.to('.page6-heading',{
+    opacity : "1",
+    scrollTrigger : {
+      trigger : ".page5",
+      scroller : ".main",
+      start : "bottom 80%",
+      end : "bottom 60%",
+      scrub : true,
     }
+  })
 
-    // Play the timeline
-    tl.play();
 
-    // Toggle flag value
-    flag = flag === 0 ? 1 : 0;
+  let sec = gsap.utils.toArray(document.querySelectorAll('.pannel'));
+  console.log(sec);
+  gsap.to(sec, {
+    xPercent: -100 * (sec.length - 1),
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".page6",
+      scroller : ".main",
+      pin: true,
+      scrub: 1,
+      snap: 1 / (sec.length - 1),
+      end: () => "+=" + document.querySelector(".page6").offsetWidth,
+    }
   });
-});
 
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
   ScrollTrigger.refresh();

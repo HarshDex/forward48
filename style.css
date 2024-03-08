@@ -11,6 +11,10 @@ html,body{
 }
 
 
+span{
+  color: #8B133B;
+}
+
 .main{
     background-color: black ;
 }
@@ -279,17 +283,49 @@ html,body{
   font-weight: 800;
 }
 
-
-
-
 /* page 5 ends */
 
 /* .page 6 starts */
 .page6{
+  overflow-y: visible;
+	-webkit-overflow-scrolling: touch;
   height: 100vh;
-  width: 100%;
-  background-color:rgb(109, 179, 233);
+  width: 400vw;
+  background-color:rgb(255, 255, 255);
   z-index: 12;
+  overflow-x: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+
+}
+.pannel{
+  height: 100vh;
+  width: 100vw;
+}
+/* .page6-part1{
+  background-color: purple;
+}
+.page6-part2{
+  background-color: pink;
+}
+.page6-part3{
+  background-color: skyblue;
+}
+.page6-part4{
+  background-color: lightgreen
+} */
+.page6-heading{
+  margin-left: 1.5vw;
+  font-size: 2.5em;
+  opacity: 0;
 }
 /* page 6 ends */
   
+/* page 7 starts */
+.page7{
+  height: 100vh;
+  width: 100%;
+  background-color: lightcoral;
+}
+
+/* page 7 ends */

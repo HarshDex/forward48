@@ -10,7 +10,6 @@ html,body{
   width : 100%;
 }
 
-
 span{
   color: #8B133B;
 }
@@ -52,7 +51,6 @@ span{
 }
 /* navigation ends */
 
-
 /* page1 starts */
 .page1{
     min-height : 90vh;
@@ -90,7 +88,6 @@ span{
 }
 /* page1 ends */
 
-
 /* page2 starts */
 .page2{
     display: flex;
@@ -112,8 +109,6 @@ span{
     object-fit: cover;
 }
 /* page2 ends */
-
-
 
 /* page 3 starts */
 .page3{
@@ -137,15 +132,12 @@ span{
   width: 50%;
   padding: 2em;
 }
-
-
 .page3-info-section p{
   position: absolute;
   top: 90%;
   font-size: 1.6em;
   font-weight: 500;
 }
-
 .page3-image{
   display: flex;
   justify-content: center;
@@ -156,25 +148,20 @@ span{
   overflow: hidden;
   margin-top: 10vh;
 }
-
 .page3-image img{
   height:60%;
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
 }
-
-
-
-
-
 /* page 3 ends */
 
+/* page null starts */
 .pageNull{
     height: 70vh;
     width: 100%;
 }
-
+/* page null ends */
 
 
 /* page 4 starts */
@@ -291,7 +278,7 @@ span{
   overflow-x: hidden;
   display: flex;
   flex-wrap: nowrap;
-
+  font-weight: 500;
 }
 .pannel{
   height: 100vh;
@@ -332,7 +319,6 @@ span{
   height: fit-content;
   padding-left: 6em;
 }
-
 .page6-images{
   display: flex;
   justify-content: center;
@@ -349,10 +335,10 @@ span{
   overflow: hidden;
 }
 .page6-image:nth-child(2){
-  transform : rotate(10deg);
+  transform : rotate(5deg);
 }
 .page6-image:nth-child(3){
-  transform : rotate(-10deg);
+  transform : rotate(-5deg);
 }
 .page6-image img{
   height: 100%;
@@ -367,7 +353,6 @@ span{
   font-size: 2em;
   /* margin-bottom: 10vh; */
 }
-
 .pannel:nth-child(3) .page6-contents{
   position: relative;
   top: 30%;
@@ -390,40 +375,103 @@ span{
   left: 50%;
   top: 40%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 /* page 6 ends */
   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* page 7 starts */
 .page7{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: white;
+}
+.page7-heading{
+  margin-top : 5%;
+  margin-bottom: 3%;
+  text-align: center;
+}
+.page7-heading h1{
+  font-weight: 900;
+  font-size: 2.5em;
+}
+.card-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  flex-wrap: wrap;
+  height: 80vh;
+  width: 100%;
+}
+.page7-card{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding : 20px;
+  height: 25em;
+  width: 20em;
+  border : 1px solid rgb(110, 110, 110);
+  color: rgb(68, 68, 68);
+  transition: all ease .6s;
+}
+.page7-card:hover{
+  /* background-color: rgb(245, 244, 244); */
+  background-color : linear-gradient(toright,#8B133B,white);
+  border : 1px solid rgb(238, 181, 181);
+  color: black;
+}
+.page7-card:hover .apply-now{
+  background-color: #8B133B;
+  color: white;
+}
+.page7-card:hover i{
+  color:#8B133B;
+}
+.page7-card p:nth-child(1){
+  font-size: .9em;
+  font-weight: 600;
+}
+.page7-card h1{
+  margin-bottom: 20px;
+  font-weight: 200;
+  font-size: 3em;
+  letter-spacing: -3px;
+  color: black;
+}
+.apply-now{
+  padding: .7em;
+  width: 90%;
+  border-radius: 20px;
+  border : 1px solid rgb(174, 174, 174);
+  margin-bottom: 5%;
+  background-color: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all ease .4s;
+}
+.plan-info{
+  font-size: .9em;
+  font-weight: 400;
+}
+.card-info{
+  margin: 4% 0;
+  padding-top : 4%;
+  border-top: 1px solid rgb(93, 93, 93);
+}
+.card-info  i{
+  margin-right: 1em;
+}
+/* page 7 ends */
+
+/* page 8 starts */
+.page8{
+  display: grid;
+  place-items: center;
   height: 100vh;
   width: 100%;
-  background-color: lightcoral;
+  background-color:rgb(208, 133, 146)
 }
 
-/* page 7 ends */
+/* page 8 ends */

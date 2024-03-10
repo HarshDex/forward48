@@ -151,7 +151,7 @@ span{
 .page3-image img{
   height:60%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
 }
 /* page 3 ends */
@@ -413,14 +413,17 @@ span{
   height: 25em;
   width: 20em;
   border : 1px solid rgb(110, 110, 110);
-  color: rgb(68, 68, 68);
+  color: rgb(111, 111, 111);
   transition: all ease .6s;
+  overflow: hidden;
 }
 .page7-card:hover{
   /* background-color: rgb(245, 244, 244); */
   background-color : linear-gradient(toright,#8B133B,white);
   border : 1px solid rgb(238, 181, 181);
   color: black;
+  box-shadow: 0px 0px 10px black;
+  transform : scale(1.01)
 }
 .page7-card:hover .apply-now{
   background-color: #8B133B;
@@ -468,11 +471,105 @@ span{
 
 /* page 8 starts */
 .page8{
-  display: grid;
-  place-items: center;
+  padding-top: 4em;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+.page8-heading{
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: 900;
+}
+.page8-card-section{
   height: 100vh;
   width: 100%;
-  background-color:rgb(208, 133, 146)
 }
-
+.page8-cards1{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 100%;
+  gap: 10%;
+  margin-top: 3%;
+  overflow-x: hidden;
+}
+.page8-cards2{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  width: 100%;
+  gap: 10%;
+  margin-top: 3%;
+  overflow-x: hidden;
+}
+.page8-card{
+  padding: 1em;
+  border-radius: 20px;
+  background-color: white;
+  position: absolute;
+  height: 96%;
+  width: 35vw;
+  border : 3px solid rgb(48, 48, 48);
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgb(57, 57, 57);
+}
+.card1{
+  left: 8%;
+  z-index: 1;
+}
+.card2{
+  left: 26%;
+  z-index: 2;
+}
+.card3{
+  left: 43%;
+  z-index: 3;
+}
+.card4{
+  left: 60%;
+  z-index: 4;
+}
+.card-inner{
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  font-size: 1.1em;
+}
+.profile{
+  display: flex;
+  align-items: center;
+  font-size: .9em;
+  gap: 10px;
+}
+.profile-image{
+  border : 1px solid black;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+.profile-image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 /* page 8 ends */
+
+
+/* page 9 starts */
+.page9{
+  height: 100vh;
+  width: 100%;
+}
+/* page 9 ends */

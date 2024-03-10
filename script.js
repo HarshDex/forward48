@@ -145,6 +145,40 @@ const locoScroll = new LocomotiveScroll({
     }
   });
 
+  const cardContainers = document.querySelectorAll('.page8-cards1, .page8-cards2');
+  
+  cardContainers.forEach((container) => {
+    const cards = gsap.utils.toArray(container.querySelectorAll('.page8-card'));
+  
+    cards.forEach((card, index) => {
+      card.addEventListener('mouseenter', (dets) => {
+        const hoveredCardIndex = index;
+  
+        cards.forEach((otherCard, otherIndex) => {
+          if (otherIndex > hoveredCardIndex) { 
+            gsap.to(otherCard, {
+              x: 200,
+              duration: 0.3,
+              ease : 'ease.inOut',
+            });
+          }
+        });
+      });
+  
+      card.addEventListener('mouseleave', (dets) => {
+        cards.forEach((otherCard) => {
+          gsap.to(otherCard, {
+            x: 0, 
+            duration: 0.3,
+            ease : 'expo.out',
+          });
+        });
+      });
+    });
+  });
+
+
+
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
   ScrollTrigger.refresh();
   

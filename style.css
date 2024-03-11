@@ -19,6 +19,17 @@ span{
     background-color: black ;
 }
 
+/* cursor starts here */
+.cursor{
+  height: 15px;
+  width: 15px;
+  background-color : #8B133B;
+  border-radius: 100%;
+  position: fixed;
+  z-index: 10;
+}
+/* cursor ends here */
+
 /* navigation starts */
 .navigation{
     display: flex;
@@ -71,14 +82,18 @@ span{
     width: 80vw;
     text-align: center;
     margin-top: 10vh;
+    z-index: 15;
 }
 .tag1{
     margin-top: 12vh;
     font-size: 9vw;
+    z-index: 15;
 }
 .tag2{
   margin-top: 20px;
-    font-size: 6vw;
+  font-size: 6vw;
+  z-index: 15;
+
 }
 .page1-abouts{
   width: 70%;
@@ -640,11 +655,4 @@ span{
   left: 0;
   height: 5vh;
 }
-
-
-
-
-
-
-
 /* page 9 ends */

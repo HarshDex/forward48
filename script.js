@@ -15,6 +15,25 @@ const locoScroll = new LocomotiveScroll({
     pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
   });
 
+  const page1 = document.querySelector('.main');
+  page1.addEventListener('mousemove',(dets)=>{
+    gsap.to('.cursor',{
+      x : dets.clientX,
+      y : dets.clientY,
+    })
+  })
+  gsap.to('.cursor',{
+    display : "none",
+    scrollTrigger : {
+      trigger : '.page2',
+      scroller : ".main",
+      scrub : true,
+      start : 'top 80%',
+      end : 'top 70%',
+    }
+  })
+  
+
   const commonScrollTriggerConfig = {
     trigger: '.page2',
     scroller : '.main',

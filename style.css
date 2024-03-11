@@ -4,6 +4,7 @@
   margin : 0;
   box-sizing : border-box;
   font-family: "Manrope",sans-serif;
+  scroll-behavior: smooth;
 }
 html,body{
   height : 100%;
@@ -518,6 +519,10 @@ span{
   border : 3px solid rgb(48, 48, 48);
   cursor: pointer;
   box-shadow: 0px 0px 5px rgb(57, 57, 57);
+  transition: all ease .3s;
+}
+.page8-card:hover{
+  background-color : rgb(234, 234, 234);
 }
 .card1{
   left: 8%;
@@ -566,10 +571,78 @@ span{
 }
 /* page 8 ends */
 
-
 /* page 9 starts */
-.page9{
-  height: 100vh;
+.footer{
+  /* background-color: rgb(229, 229, 229); */
+  position: relative;
+  margin-top: 20vh;
+  height: 55vh;
   width: 100%;
+  color: rgb(19, 19, 19);
+  padding: 2em;
+  font-weight: 600;
 }
+.footer-inner{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-top: 1px solid rgb(87, 87, 87);
+  padding-top: 1em;
+  justify-content: space-between;
+}
+.footer-part1{
+  display: flex;
+  gap: 3em;
+  width: 60%;
+}
+.footer-quick-links{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.footer-quick-links a,.footer-site-info a ,.footer-follow-us a,.footer-contact-us p{
+  color: #8B133B;
+
+}
+.footer-site-info{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-contact-us{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1em;
+}
+.footer-follow-us{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer-follow-us i{
+  position: relative;
+  left: -20px;
+  font-size: 2em;
+  margin-left: 10px;
+  font-weight: 300;
+}
+.copyright-sec{
+  position: absolute;
+  display: grid;
+  background-color: #8B133B;
+  place-items: center;
+  color: white;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  height: 5vh;
+}
+
+
+
+
+
+
+
 /* page 9 ends */

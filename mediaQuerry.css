@@ -106,6 +106,15 @@
         font-size: .8em;
       }
       /* page 4 ends */
+
+      /* page 8 starts */
+      .page8-cards1{
+        flex-direction: column;
+      }
+      .page8-cards2{
+        flex-direction: column;
+      }
+      /* page 8 ends */
   
     }
     

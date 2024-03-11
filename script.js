@@ -170,14 +170,12 @@ const locoScroll = new LocomotiveScroll({
           gsap.to(otherCard, {
             x: 0, 
             duration: 0.3,
-            ease : 'expo.out',
+            ease : 'expo.inOut',
           });
         });
       });
     });
   });
-
-
 
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
   ScrollTrigger.refresh();

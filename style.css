@@ -602,6 +602,8 @@ span{
 }
 .footer-quick-links a,.footer-site-info a ,.footer-follow-us a,.footer-contact-us p{
   color: #8B133B;
+  text-decoration: none;
+  
 
 }
 .footer-site-info{

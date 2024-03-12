@@ -136,7 +136,6 @@ span{
     border-top-right-radius: 30px;
     overflow: hidden;
 }
-
 .page3-info-section{
   position: relative;
   bottom: 30%;
@@ -586,7 +585,7 @@ span{
 }
 /* page 8 ends */
 
-/* page 9 starts */
+/* footer starts */
 .footer{
   /* background-color: rgb(229, 229, 229); */
   position: relative;
@@ -655,4 +654,4 @@ span{
   left: 0;
   height: 5vh;
 }
-/* page 9 ends */
+/* footer ends */

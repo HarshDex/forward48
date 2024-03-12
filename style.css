@@ -65,7 +65,7 @@ span{
 
 /* page1 starts */
 .page1{
-    min-height : 90vh;
+    height : 90vh;
     width: 100%;
     background-color :  rgb(220, 207, 207);
     padding-top: 10vh;
@@ -226,7 +226,7 @@ span{
 
 /* page 5 starts */
 .page5{
-  min-height: 100vh;
+  min-height: 70vh;
   width: 100%;
   background-color:white;
   color: rgba(0, 0, 0, 0.84);
@@ -285,8 +285,7 @@ span{
 /* .page 6 starts */
 .page6{
   overflow-y: visible;
-	-webkit-overflow-scrolling: touch;
-  height: 100vh;
+  min-height: 100vh;
   width: 400vw;
   background-color:rgb(255, 255, 255);
   z-index: 12;

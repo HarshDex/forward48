@@ -14,7 +14,7 @@ const locoScroll = new LocomotiveScroll({
     },
     pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
   });
-
+  
   const page1 = document.querySelector('.main');
   page1.addEventListener('mousemove',(dets)=>{
     gsap.to('.cursor',{
@@ -159,7 +159,7 @@ const locoScroll = new LocomotiveScroll({
       scroller : ".main",
       pin: true,
       scrub: 1,
-      snap: 1 / (sec.length - 1),
+      // snap: 1 / (sec.length - 1),
       end: () => "+=" + document.querySelector(".page6").offsetWidth,
     }
   });
@@ -194,6 +194,21 @@ const locoScroll = new LocomotiveScroll({
         });
       });
     });
+  });
+
+  // media querries : 
+  const mobileQuery = gsap.matchMedia();
+  mobileQuery.add("(max-width: 767px)", () => {
+    gsap.utils.toArray(['.page2', '.page3']).forEach((panel) => {
+      ScrollTrigger.getAll().forEach((st) => {
+        if (st.vars.trigger === panel) {
+            st.kill();
+        }
+      });
+    });
+    if (myLocomotiveInstance) {
+      myLocomotiveInstance.destroy();
+    };
   });
 
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());

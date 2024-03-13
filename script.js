@@ -170,7 +170,7 @@ const locoScroll = new LocomotiveScroll({
     const cards = gsap.utils.toArray(container.querySelectorAll('.page8-card'));
   
     cards.forEach((card, index) => {
-      card.addEventListener('mouseenter', (dets) => {
+      card.addEventListener('mouseenter', () => {
         const hoveredCardIndex = index;
   
         cards.forEach((otherCard, otherIndex) => {
@@ -184,7 +184,7 @@ const locoScroll = new LocomotiveScroll({
         });
       });
   
-      card.addEventListener('mouseleave', (dets) => {
+      card.addEventListener('mouseleave', () => {
         cards.forEach((otherCard) => {
           gsap.to(otherCard, {
             x: 0, 

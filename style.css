@@ -488,7 +488,7 @@ span{
   padding-top: 4em;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 90vh;
   width: 100%;
 }
 .page8-heading{

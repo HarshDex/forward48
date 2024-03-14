@@ -15,7 +15,6 @@ const locoScroll = new LocomotiveScroll({
     pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
   });
   
-
   const commonScrollTriggerConfig = {
     trigger: '.page2',
     scroller : '.main',
@@ -188,9 +187,9 @@ const locoScroll = new LocomotiveScroll({
         }
       });
     });
-    if (myLocomotiveInstance) {
-      myLocomotiveInstance.destroy();
-    };
+    // if (myLocomotiveInstance) {
+    //   myLocomotiveInstance.destroy();
+    // };
   });
 
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());

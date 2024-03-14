@@ -19,6 +19,33 @@ span{
     background-color: black ;
 }
 
+.buttons{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+  text-align: center;
+}
+.buttons button{
+  text-align: center;
+  height: 10vh;
+  cursor: pointer;
+  background-color:transparent;
+  border: none;
+  border-radius: 0;
+  font-size: 1em;
+  font-weight: 900;
+  color: rgb(192, 189, 189);
+  font-size: 1.5em;
+  transition: all esase .7s;
+}
+.buttons button:hover{
+  /* border-bottom: 1px solid white; */
+  color: #8B133B;
+  /* color: black; */
+}
+
 /* navigation starts */
 .navigation{
     display: flex;

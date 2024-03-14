@@ -19,17 +19,6 @@ span{
     background-color: black ;
 }
 
-/* cursor starts here */
-.cursor{
-  height: 15px;
-  width: 15px;
-  background-color : #8B133B;
-  border-radius: 100%;
-  position: fixed;
-  z-index: 10;
-}
-/* cursor ends here */
-
 /* navigation starts */
 .navigation{
     display: flex;

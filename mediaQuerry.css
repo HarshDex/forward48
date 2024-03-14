@@ -2,9 +2,6 @@
   .main{
     overflow: hidden;
   }
-  .cursor{
-    display: none;
-  }
   .page1{
       overflow-x: hidden;
       height :  80vh !important;
@@ -50,8 +47,10 @@
     font-size: 1.8em;
     line-height: 4.5vw;
   }
-  /* page 2 starts */
+  /* page 1ends */
 
+
+  /* page 2 starts */
   .page2{
     display: none;
     overflow-x: hidden;
@@ -253,7 +252,6 @@
   /* footer ends */
 
 }
-  
     
 /* Media query for screens between 768px and 1024px */
 @media screen and (min-width: 768px) and (max-width: 1023px) {

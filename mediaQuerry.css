@@ -2,6 +2,13 @@
   .main{
     overflow: hidden;
   }
+  .buttons{
+    position: relative;
+    top: 1.1em;
+    font-size: .8em;
+    width: 50vw;
+  }
+  
   .page1{
       overflow-x: hidden;
       height :  80vh !important;
@@ -53,18 +60,8 @@
   /* page 2 starts */
   .page2{
     display: none;
-    overflow-x: hidden;
-    justify-content: center;
-    align-items: center;
-    height: 60vh;
-    width: 100%;
-    animation: none !important;
   }
-  .page2-video{
-    border: 1px solid rgb(95, 95, 95) ;
-      height: 70vh;
-      width: 100vw;
-  }
+
   /* page 2 ends */
 
   /* page 3 starts */
@@ -90,10 +87,10 @@
   }
   .page3-image{
     position: absolute;
-    top: -28vh;
+    top: -20vh;
     align-self: center;
     height: 100%;
-    width: 100%;
+    width: 95%;
   }
   .page3-image img{
     object-fit: cover;

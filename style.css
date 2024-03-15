@@ -29,7 +29,6 @@ span{
 }
 .buttons button{
   text-align: center;
-  height: 10vh;
   cursor: pointer;
   background-color:transparent;
   border: none;
@@ -56,15 +55,6 @@ span{
     background-color: black;
     z-index: 5;
     position: fixed;
-}
-.navigation-buttons button{
-    background-color: transparent;
-    color: white;
-    border : none;
-    margin: 0.2em;
-    font-size: 1em;
-    letter-spacing: -1px;
-    cursor: pointer;    
 }
 .logo{
     display: flex;

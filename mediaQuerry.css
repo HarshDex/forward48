@@ -4,11 +4,10 @@
   }
   .buttons{
     position: relative;
-    top: 1.1em;
+    top: 1.5em;
     font-size: .8em;
     width: 50vw;
   }
-  
   .page1{
       overflow-x: hidden;
       height :  80vh !important;
@@ -17,9 +16,8 @@
   }
   .page1-texts{
     position: absolute;
-    top : 5vh;
+    top : 12vh;
     height: fit-content;
-    /* left: 1; */
   }
   .tag1{
     font-size: 12vw;
@@ -70,27 +68,30 @@
     overflow-x: hidden;
     border-radius: 0;
     position: relative;
-    height: 70vh;
+    height: 80vh;
     flex-direction: column-reverse;
     animation: none !important;
 
   }
-  .page3-info-section{
+  .page3-info-section p{
     display: flex;
     justify-content: center;
     align-items: start;
-    padding: 2em;
+    padding: .5em;
+    left: 0;
     position: absolute;
-    height: 100%;
-    font-size : .7em;
-    width: 100%;
+    font-size : 1.1em;
+    width: 100vw;
+    height: fit-content;
+    /* top: 0vh */
   }
   .page3-image{
     position: absolute;
     top: -20vh;
     align-self: center;
-    height: 100%;
+    height: 90%;
     width: 95%;
+    margin-bottom: 10vh;
   }
   .page3-image img{
     object-fit: cover;
